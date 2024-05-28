@@ -14,11 +14,11 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(PrayerTimeService::class, function ($app) {
-            return new PrayerTimeService(new \GuzzleHttp\Client);
+            return new PrayerTimeService(new \GuzzleHttp\Client());
         });
 
         $this->app->singleton(QuranService::class, function ($app) {
-            return new QuranService(new \GuzzleHttp\Client);
+            return new QuranService(new \GuzzleHttp\Client());
         });
     }
 
