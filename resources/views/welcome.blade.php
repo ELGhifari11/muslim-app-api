@@ -31,7 +31,7 @@
 
                     <main class="mt-6">
                         <div class="text-center text-12xl font-bold">
-                            Welcome to Rumah IT Project with EL Ghifari
+                            Welcome to Rumah IT Project API with EL Ghifari
                         </div>
 
                     </main>
