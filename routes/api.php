@@ -40,6 +40,9 @@ Route::get('/quran-juz/semua', [QuranController::class, 'getAllJuz']);
 // > https://muslimapp.elghifari.site/api/quran-kisah/1
 Route::get('/quran-kisah/{tema}', [QuranController::class, 'getAyatByTema']);
 
+// > https://muslimapp.elghifari.site/api/quran-semua-kisah
+Route::get('quran-semua-kisah', [QuranController::class, 'getAllTema']);
+
 
 
 
