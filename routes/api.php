@@ -18,4 +18,5 @@ Route::get('prayer-times/{location}/{date}', [PrayerTimeController::class, 'inde
 Route::get('/quran-surat/{number}', [QuranController::class, 'getSuratByNumber']);
 
 
+Route::get('/quran-surat/semua', [QuranController::class, 'getAllSurat']);
 

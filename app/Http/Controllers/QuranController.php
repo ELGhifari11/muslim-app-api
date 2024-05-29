@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Services\QuranService;
 
+use App\Services\QuranService;
+use Illuminate\Http\Request;
 
 class QuranController extends Controller
 {
@@ -19,6 +20,17 @@ class QuranController extends Controller
 
         if (!$surat) {
             return response()->json(['error' => 'Surat not found'], 404);
+        }
+
+        return response()->json($surat);
+    }
+
+    public function getAllSurat()
+    {
+        $surat = $this->quranService->getAllSurat();
+
+        if (!$surat) {
+            return response()->json(['error' => 'No surat found'], 404);
         }
 
         return response()->json($surat);

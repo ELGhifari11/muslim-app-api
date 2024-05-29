@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Log;
 
 class QuranService
 {
@@ -15,7 +16,27 @@ class QuranService
 
     public function getSuratByNumber($number)
     {
-        $response = $this->client->get("https://api.myquran.com/v2/quran/surat/{$number}");
-        return json_decode($response->getBody()->getContents(), true);
+        try {
+            $response = $this->client->get("https://api.myquran.com/v2/quran/surat/{$number}");
+            $data = json_decode($response->getBody()->getContents(), true);
+            Log::info('API response:', $data);
+            return $data;
+        } catch (\Exception $e) {
+            Log::error('Error fetching surat:', ['message' => $e->getMessage()]);
+            return null;
+        }
+    }
+
+    public function getAllSurat()
+    {
+        try {
+            $response = $this->client->get("https://api.myquran.com/v2/quran/surat/semua");
+            $data = json_decode($response->getBody()->getContents(), true);
+            Log::info('API response:', $data);
+            return $data;
+        } catch (\Exception $e) {
+            Log::error('Error fetching all surat:', ['message' => $e->getMessage()]);
+            return null;
+        }
     }
 }
