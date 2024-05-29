@@ -91,4 +91,17 @@ class QuranService
             return null;
         }
     }
+
+    public function getAyatByJuz($juz)
+    {
+        try {
+            $response = $this->client->get("https://api.myquran.com/v2/quran/ayat/juz/{$juz}");
+            $data = json_decode($response->getBody()->getContents(), true);
+            Log::info('API response:', $data);
+            return $data;
+        } catch (\Exception $e) {
+            Log::error('Error fetching ayat by juz:', ['message' => $e->getMessage()]);
+            return null;
+        }
+    }
 }
