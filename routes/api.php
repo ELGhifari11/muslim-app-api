@@ -21,3 +21,8 @@ Route::get('/quran-surat/semua', [QuranController::class, 'getAllSurat']);
 
 // > https://muslimapp.elghifari.site/api/quran-ayat/1
 Route::get('/quran-ayat/{index}', [QuranController::class, 'getAyatByIndex']);
+
+
+// > https://muslimapp.elghifari.site/api/quran/25/1
+Route::get('/quran/{surat}/{ayat}', [QuranController::class, 'getAyatBySuratAndAyat']);
+

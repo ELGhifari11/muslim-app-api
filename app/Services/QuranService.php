@@ -52,4 +52,17 @@ class QuranService
             return null;
         }
     }
+
+    public function getAyatBySuratAndAyat($surat, $ayat)
+    {
+        try {
+            $response = $this->client->get("https://api.myquran.com/v2/quran/ayat/{$surat}/{$ayat}");
+            $data = json_decode($response->getBody()->getContents(), true);
+            Log::info('API response:', $data);
+            return $data;
+        } catch (\Exception $e) {
+            Log::error('Error fetching ayat:', ['message' => $e->getMessage()]);
+            return null;
+        }
+    }
 }
