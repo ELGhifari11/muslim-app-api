@@ -34,6 +34,10 @@ Route::get('/quran/page/{page}', [QuranController::class, 'getAyatByPage']);
 // > https://muslimapp.elghifari.site/api/quran/juz/1
 Route::get('/quran/juz/{juz}', [QuranController::class, 'getAyatByJuz']);
 
+// > https://muslimapp.elghifari.site/api/quran/juz/semua
+Route::get('/quran-juz/semua', [QuranController::class, 'getAllJuz']);
+
+
 
 
 

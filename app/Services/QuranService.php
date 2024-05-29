@@ -104,4 +104,17 @@ class QuranService
             return null;
         }
     }
+
+    public function getAllJuz()
+    {
+        try {
+            $response = $this->client->get("https://api.myquran.com/v2/quran/juz/semua");
+            $data = json_decode($response->getBody()->getContents(), true);
+            Log::info('API response:', $data);
+            return $data;
+        } catch (\Exception $e) {
+            Log::error('Error fetching all juz:', ['message' => $e->getMessage()]);
+            return null;
+        }
+    }
 }

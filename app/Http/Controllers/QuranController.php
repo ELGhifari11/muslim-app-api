@@ -88,4 +88,13 @@ class QuranController extends Controller
         }
         return response()->json($ayatJuz);
     }
+
+    public function getAllJuz()
+    {
+        $juz = $this->quranService->getAllJuz();
+        if (!$juz) {
+            return response()->json(['error' => 'No juz found'], 404);
+        }
+        return response()->json($juz);
+    }
 }
