@@ -65,4 +65,17 @@ class QuranService
             return null;
         }
     }
+
+    public function getAyatRange($surat, $ayat, $panjang)
+    {
+        try {
+            $response = $this->client->get("https://api.myquran.com/v2/quran/ayat/{$surat}/{$ayat}/{$panjang}");
+            $data = json_decode($response->getBody()->getContents(), true);
+            Log::info('API response:', $data);
+            return $data;
+        } catch (\Exception $e) {
+            Log::error('Error fetching ayat range:', ['message' => $e->getMessage()]);
+            return null;
+        }
+    }
 }

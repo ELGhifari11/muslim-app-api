@@ -57,4 +57,15 @@ class QuranController extends Controller
 
         return response()->json($ayat);
     }
+
+    public function getAyatRange($surat, $ayat, $panjang)
+    {
+        $ayatRange = $this->quranService->getAyatRange($surat, $ayat, $panjang);
+
+        if (!$ayatRange) {
+            return response()->json(['error' => 'Ayat range not found'], 404);
+        }
+
+        return response()->json($ayatRange);
+    }
 }
