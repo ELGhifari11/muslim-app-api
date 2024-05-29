@@ -78,4 +78,17 @@ class QuranService
             return null;
         }
     }
+
+    public function getAyatByPage($page)
+    {
+        try {
+            $response = $this->client->get("https://api.myquran.com/v2/quran/ayat/page/{$page}");
+            $data = json_decode($response->getBody()->getContents(), true);
+            Log::info('API response:', $data);
+            return $data;
+        } catch (\Exception $e) {
+            Log::error('Error fetching ayat by page:', ['message' => $e->getMessage()]);
+            return null;
+        }
+    }
 }
