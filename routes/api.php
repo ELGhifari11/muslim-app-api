@@ -15,7 +15,7 @@ Route::get('prayer-times/{location}/{date}', [PrayerTimeController::class, 'inde
 
 
 // > https://muslimapp.elghifari.site/api/quran/surat/25
-Route::get('/quran/surat/{number}', [QuranController::class, 'getSuratByNumber']);
+Route::get('/quran-surat/{number}', [QuranController::class, 'getSuratByNumber']);
 
 
 
