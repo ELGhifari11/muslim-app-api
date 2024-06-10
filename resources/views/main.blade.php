@@ -934,43 +934,51 @@
 
                 <main class="mt-6">
                     <div class="text-center text-22xl font-bold">
-                        <div >
-                            <button onclick="window.location.href='/acak/juz/1-5';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong>Juz 1-5 </strong>
-                            </button>
+
+                        <button onclick="window.location.href='/acak/juz/1-5';"
+                            class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
+                            <strong>Juz 1-5 </strong>
+                        </button>
+                        <div class="text-center text-22xl font-bold">
 
                             <button onclick="window.location.href='/acak/juz/6-10';"
                                 class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
                                 <strong>Juz 6-10 </strong>
                             </button>
+                        </div>
+                        <div class="text-center text-22xl font-bold">
 
                             <button onclick="window.location.href='/acak/juz/11-15';"
                                 class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
                                 <strong>Juz 11-15</strong>
                             </button>
+                        </div>
+                        <div class="text-center text-22xl font-bold">
+
 
                             <button onclick="window.location.href='/acak/juz/16-20';"
                                 class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
                                 <strong>Juz 16-20</strong>
                             </button>
+                            <div class="text-center text-22xl font-bold">
 
-                            <button onclick="window.location.href='/acak/juz/21-25';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong>Juz 21-25</strong>
-                            </button>
+                                <button onclick="window.location.href='/acak/juz/21-25';"
+                                    class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
+                                    <strong>Juz 21-25</strong>
+                                </button>
 
+
+                            </div>
                             <button onclick="window.location.href='/acak/juz/26-30';"
                                 class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
                                 <strong>Juz 26-30</strong>
                             </button>
+
+
                         </div>
-                    </div>
 
 
 
-                    <br />
-                    <br />
 
                 </main>
 
