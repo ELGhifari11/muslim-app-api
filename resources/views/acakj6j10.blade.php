@@ -946,9 +946,10 @@
 
                 <main class="mt-6">
                     <div class="text-right text-22xl font-bold">
-                        <button onclick="window.location.reload();"
-                            class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded mt-4"><strong>Refresh</strong>
-                        </button>
+                        <button onclick="window.location.href='/';"
+                        class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
+                        <strong>Beranda </strong>
+                    </button>
                     </div>
 
                     <div class="text-left text-12xl font-bold">
