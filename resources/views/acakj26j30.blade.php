@@ -947,7 +947,7 @@
                 <main class="mt-6">
                     <div class="text-right text-22xl font-bold">
                         <button onclick="window.location.reload();"
-                            class="bg-blue-500 hover:bg-blue-900 text-blackfont-bold py-2 px-4 rounded mt-4"><strong>Refresh</strong>
+                            class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded mt-4"><strong>Refresh</strong>
                         </button>
                     </div>
 
@@ -955,10 +955,10 @@
 
                         <p><audio controls src="{{ $response['data']['audio'] }}"></audio></p>
                         <br />
-                        <p class="lateef-font">{{ $response['data']['arab'] }} </p>
+                        <p class="lateef-font text-black ">{{ $response['data']['arab'] }} </p>
                         <br />
 
-                        <p class="text-sm font-normal"><strong>Translation:</strong> {{ $response['data']['text'] }}</p>
+                        <p class="text-sm font-normal text-black font-bold"><strong>Translation:</strong> {{ $response['data']['text'] }}</p>
                     </div>
                     <div class="text-center text-22xl font-bold">
                         <button onclick="window.location.reload();"
