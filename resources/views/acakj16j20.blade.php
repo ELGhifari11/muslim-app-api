@@ -956,7 +956,7 @@
 
                         <p><audio controls src="{{ $response['data']['audio'] }}"></audio></p>
                         <br />
-                        <p class="lateef-fon text-black font-bold">{{ $response['data']['arab'] }} </p>
+                        <p class="lateef-font text-black font-bold">{{ $response['data']['arab'] }} </p>
                         <br />
 
                         <p class="text-sm font-normal text-black font-bold"><strong>Translation:</strong> {{ $response['data']['text'] }}</p>
