@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Beranda</title>
+    <title>Acak Juz 8</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -14,10 +14,11 @@
 
     <!-- Styles -->
     <style>
+
         .lateef-font {
-            font-family: 'Lateef';
-            font-size: 30px;
-        }
+                font-family: 'Lateef';
+                font-size: 30px;
+            }
 
         /* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */
         *,
@@ -931,119 +932,42 @@
                     @if (Route::has('login'))
                     @endif
                 </header>
+                <?php
+
+                // Panggilan API
+                $data = file_get_contents('https://muslimapp.elghifari.site/api/quran/ayat/acak/juz8');
+                $response = json_decode($data, true);
+                // Tampilkan data dalam tampilan Blade
+                ?>
+                <div class="text-center text-black text-14xl font-bold">
+                    <strong>ACAK JUZ 8</strong>
+                    <p>{{ $response['info']['surat']['id'] }} : {{ $response['data']['ayah'] }} / J{{ $response['data']['juz'] }} : H{{ $response['data']['page'] }}</p>
+                </div>
 
                 <main class="mt-6">
-                    <strong class=" flex justify-center text-center text-22xl font-bold text-black">PILH JUZ YANG MAU DI ACAK</strong>
-                    <div class=" flex  text-center text-22xl font-bold">
+                    <div class="text-right text-22xl font-bold">
+                        <button onclick="window.location.href='/';"
+                        class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
+                        <strong>Beranda </strong>
+                    </button>
+                    </div>
 
+                    <div class="text-left text-12xl font-bold">
 
-                        <div class="  text-22xl font-bold">
+                        <p><audio controls src="{{ $response['data']['audio'] }}"></audio></p>
+                        <br />
+                        <p class="lateef-font text-black font-bold" >{{ $response['data']['arab'] }} </p>
+                        <br />
 
-                            <button onclick="window.location.href='/acak/juz/6';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong class="text-black">&nbsp; |  &nbsp; Juz 6 &nbsp; |  &nbsp;</strong>
-                            </button>
-
-
-                        </div>
-                        <div class=" text-22xl font-bold">
-                            <button onclick="window.location.href='/acak/juz/7';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong class="text-black">Juz 7 &nbsp; |  &nbsp;</strong>
-                            </button>
-
-                        </div>
-                        <div class=" text-22xl font-bold">
-
-                            <button onclick="window.location.href='/acak/juz/8';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong>Juz 8 &nbsp; |  &nbsp;</strong>
-                            </button>
-
-
-                        </div>
-                        <div class=" text-22xl font-bold">
-
-                            <button onclick="window.location.href='/acak/juz/9';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong>Juz 9 &nbsp; |  &nbsp;</strong>
-                            </button>
-
-
-                        </div>
-                        <div class=" text-22xl font-bold">
-
-                            <button onclick="window.location.href='/acak/juz/10';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong>Juz 10 &nbsp; |  &nbsp;</strong>
-                            </button>
-
-
-                        </div>
-                        <div class=" text-22xl font-bold">
-
-                            <button onclick="window.location.href='/acak/juz/1-5';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong>Juz 1 - 5 &nbsp; |  &nbsp;</strong>
-                            </button>
-
-
-                        </div>
-
-                        <div class=" text-22xl font-bold">
-
-                            <button onclick="window.location.href='/acak/juz/6-10';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong>Juz 6 - 10 &nbsp; |  &nbsp;</strong>
-                            </button>
-
-
-                        </div>
-                        <div class=" text-22xl font-bold">
-
-                            <button onclick="window.location.href='/acak/juz/11-15';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong>Juz 11 - 15 &nbsp; |  &nbsp;</strong>
-                            </button>
-
-
-                        </div>
-                        <div class=" text-22xl font-bold">
-
-
-                            <button onclick="window.location.href='/acak/juz/16-20';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong>Juz 16 - 20 &nbsp; |  &nbsp;</strong>
-                            </button>
-
-
-                        </div>
-
-                        <div class=" text-22xl font-bold">
-
-                            <button onclick="window.location.href='/acak/juz/21-25';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong>Juz 21 - 25 &nbsp; |  &nbsp;</strong>
-                            </button>
-
-
-
-
-                        </div>
-                        <div class=" text-22xl font-bold">
-
-                            <button onclick="window.location.href='/acak/juz/26-30';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong>Juz 26 - 30 &nbsp; |  &nbsp;</strong>
-                            </button>
-
-
-
-
-                        </div>
-
-
-
+                        <p class="text-sm font-normal text-black font-bold"><strong>Translation:</strong> {{ $response['data']['text'] }}</p>
+                    </div >
+                    <div class="text-center text-22xl font-bold">
+                    <button onclick="window.location.reload();"
+                    class="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded mt-4"><strong>Refresh</strong>
+                    </button>
+                    </div>
+                    <br/>
+                    <br/>
 
                 </main>
 
