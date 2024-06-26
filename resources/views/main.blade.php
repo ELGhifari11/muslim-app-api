@@ -933,118 +933,32 @@
                 </header>
 
                 <main class="mt-6">
-                    <strong class=" flex justify-center text-center text-22xl font-bold text-black">- PILH JUZ YANG MAU DI ACAK -</strong>
-                    <div class=" text-center text-22xl font-bold">
-
-
-                        <div class="  text-22xl font-bold">
-
-                            <button onclick="window.location.href='/acak/juz/6';"
+                    <h1 class="text-center text-3xl font-bold text-black">ACAK PER JUZ</h1>
+                    <div class="grid grid-cols-2">
+                        @for ($i = 1; $i <= 30; $i++)
+                            <button onclick="window.location.href='/acak/juz/{{ $i }}';"
                                 class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong class="text-black"> Juz 6 </strong>
+                                <strong>Juz {{ $i }}</strong>
                             </button>
 
-
-                        </div>
-                        <div class=" text-22xl font-bold">
-                            <button onclick="window.location.href='/acak/juz/7';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong class="text-black">Juz 7 </strong>
-                            </button>
-
-                        </div>
-                        <div class=" text-22xl font-bold">
-
-                            <button onclick="window.location.href='/acak/juz/8';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong>Juz 8 </strong>
-                            </button>
-
-
-                        </div>
-                        <div class=" text-22xl font-bold">
-
-                            <button onclick="window.location.href='/acak/juz/9';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong>Juz 9 </strong>
-                            </button>
-
-
-                        </div>
-                        <div class=" text-22xl font-bold">
-
-                            <button onclick="window.location.href='/acak/juz/10';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong>Juz 10 </strong>
-                            </button>
-
-
-                        </div>
-                        <div class=" text-22xl font-bold">
-
-                            <button onclick="window.location.href='/acak/juz/1-5';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong>Juz 1 - 5 </strong>
-                            </button>
-
-
-                        </div>
-
-                        <div class=" text-22xl font-bold">
-
-                            <button onclick="window.location.href='/acak/juz/6-10';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong>Juz 6 - 10 </strong>
-                            </button>
-
-
-                        </div>
-                        <div class=" text-22xl font-bold">
-
-                            <button onclick="window.location.href='/acak/juz/11-15';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong>Juz 11 - 15 </strong>
-                            </button>
-
-
-                        </div>
-                        <div class=" text-22xl font-bold">
-
-
-                            <button onclick="window.location.href='/acak/juz/16-20';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong>Juz 16 - 20 </strong>
-                            </button>
-
-
-                        </div>
-
-                        <div class=" text-22xl font-bold">
-
-                            <button onclick="window.location.href='/acak/juz/21-25';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong>Juz 21 - 25 </strong>
-                            </button>
-
-
-
-
-                        </div>
-                        <div class=" text-22xl font-bold">
-
-                            <button onclick="window.location.href='/acak/juz/26-30';"
-                                class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
-                                <strong>Juz 26 - 30 </strong>
-                            </button>
-
-
-
-
-                        </div>
-
-
-
-
+                        @endfor
+                    </div>
+                    <h1 class="text-center text-3xl font-bold text-black">ACAK PER 5 JUZ</h1>
+                    <div class="grid grid-cols-2">
+                        @for ($i = 1; $i <= 30; $i++)
+                        @if ($i % 5 == 1)
+                        @php
+                            $start = $i;
+                            $end = $i + 4;
+                            $end = $end > 30 ? 30 : $end;
+                        @endphp
+                        <button onclick="window.location.href='/acak/juz/{{ $start }}-{{ $end }}';"
+                            class="bg-blue-500 hover:bg-blue-900 text-black font-bold py-2 px-4 rounded">
+                            <strong>Juz {{ $start }} - {{ $end }}</strong>
+                        </button>
+                    @endif
+                @endfor
+                    </div>
                 </main>
 
 
@@ -1054,3 +968,4 @@
 </body>
 
 </html>
+
