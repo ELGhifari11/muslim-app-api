@@ -78,14 +78,15 @@
                         </div>
                         <div class="card-wrap">
                             <div id="no-surat" class="card-header">
-                                <h4>SURAT KE - {{ $response['info']['surat']['id'] }}</h4>
+                                <h4>SURAT KE - {{ isset($response['info']['surat']['id']) ? $response['info']['surat']['id'] : 'Data Tidak Tersedia' }}</h4>
                                 <!-- Hasil Dari ID no-surat akan ditampilkan di sini -->
                             </div>
                             <div id="nama-surat" class="card-body">
-                                {{ $response['info']['surat']['nama']['id'] }}
+                                {{ isset($response['info']['surat']['nama']['id']) ? $response['info']['surat']['nama']['id'] : 'Data Tidak Tersedia' }}
                                 <!-- Hasil Dari ID nama-surat akan ditampilkan di sini -->
                             </div>
                         </div>
+
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12">
