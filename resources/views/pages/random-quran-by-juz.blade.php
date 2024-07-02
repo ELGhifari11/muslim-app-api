@@ -99,8 +99,12 @@
                                 <h4>JUZ</h4>
                             </div>
                             <div id="no-juz" class="card-body">
+                                @if(isset($response['data']['juz']))
+                                    {{ $response['data']['juz'] }}
+                                @else
+                                    Data Juz Tidak Tersedia
+                                @endif
                                 <!-- Hasil Dari ID no-juz akan ditampilkan di sini -->
-                                {{ $response['data']['juz'] }}
                             </div>
                         </div>
                     </div>
