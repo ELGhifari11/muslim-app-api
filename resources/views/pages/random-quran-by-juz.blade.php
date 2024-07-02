@@ -78,11 +78,11 @@
                         </div>
                         <div class="card-wrap">
                             <div id="no-surat" class="card-header">
-                                <h4>SURAT KE - {{ isset($response['info']['surat']['id']) ? $response['info']['surat']['id'] : 'Data Tidak Tersedia' }}</h4>
+                                <h4>SURAT KE - {{ isset($response['info']['surat']['id']) ? $response['info']['surat']['id'] : '-' }}</h4>
                                 <!-- Hasil Dari ID no-surat akan ditampilkan di sini -->
                             </div>
                             <div id="nama-surat" class="card-body">
-                                {{ isset($response['info']['surat']['nama']['id']) ? $response['info']['surat']['nama']['id'] : 'Data Tidak Tersedia' }}
+                                {{ isset($response['info']['surat']['nama']['id']) ? $response['info']['surat']['nama']['id'] : '-' }}
                                 <!-- Hasil Dari ID nama-surat akan ditampilkan di sini -->
                             </div>
                         </div>
@@ -102,7 +102,7 @@
                                 @if(isset($response['data']['juz']))
                                     {{ $response['data']['juz'] }}
                                 @else
-                                    Data Juz Tidak Tersedia
+                                    -
                                 @endif
                                 <!-- Hasil Dari ID no-juz akan ditampilkan di sini -->
                             </div>
@@ -118,9 +118,14 @@
                             <div class="card-header">
                                 <h4>HALAMAN</h4>
                             </div>
+
                             <div id="no-page" class="card-body">
+                                @if(isset($response['data']['page']))
+                                    {{ $response['data']['page'] }}
+                                @else
+                                   -
+                                @endif
                                 <!-- Hasil Dari ID no-page akan ditampilkan di sini -->
-                                {{ $response['data']['page'] }}
                             </div>
                         </div>
                     </div>
@@ -135,9 +140,14 @@
                             <div class="card-header">
                                 <h4>AYAT</h4>
                             </div>
-                            <div id="no-ayat" class="card-body">
+
+                            <div id="no-ayah" class="card-body">
+                                @if(isset($response['data']['ayah']))
+                                    {{ $response['data']['ayah'] }}
+                                @else
+                                    -
+                                @endif
                                 <!-- Hasil Dari ID no-ayah akan ditampilkan di sini -->
-                                {{ $response['data']['ayah'] }}
                             </div>
                         </div>
                     </div>
@@ -152,9 +162,14 @@
                             <div class="card-header">
                                 <h4>TOTAL AYAT</h4>
                             </div>
+
                             <div id="no-ayat-max" class="card-body">
+                                @if(isset($response['info']['surat']['ayat_max']))
+                                    {{ $response['info']['surat']['ayat_max'] }}
+                                @else
+                                    -
+                                @endif
                                 <!-- Hasil Dari ID no-ayat-max akan ditampilkan di sini -->
-                                {{ $response['info']['surat']['ayat_max'] }}
                             </div>
                         </div>
                     </div>
@@ -190,23 +205,37 @@
                                         src="{{ asset('img/products/product-1-50.png') }}" alt="product">
                                 </a>
                                 <div class="media-body">
-                                    <div id="audio" class="media-title mr-5 ">
+                                    <div id="audio" class="media-title mr-5">
                                         <!-- Hasil Dari ID audio akan ditampilkan di sini -->
-                                        <audio controls src="{{ $response['data']['audio'] }}"></audio>
+                                        @if(isset($response['data']['audio']) && !empty($response['data']['audio']))
+                                            <audio controls src="{{ $response['data']['audio'] }}"></audio>
+                                        @else
+                                            -
+                                        @endif
                                     </div>
                                 </div>
+
                             </li>
                         </ul>
                         <div class="text-center mt-2 mb-2">
-                            <h4 id="ayat-arab" class="lateef-arabic text-dark ">
+                            <h4 id="ayat-arab" class="lateef-arabic text-dark">
                                 <!-- Hasil Dari ID ayat-arab akan ditampilkan di sini -->
-                                {{ $response['data']['arab'] }}
-
+                                @if(isset($response['data']['arab']) && !empty($response['data']['arab']))
+                                    {{ $response['data']['arab'] }}
+                                @else
+                                    Pilih juz yang mau di acak
+                                @endif
                             </h4>
+
                             <div id="ayat-arti" class="text-muted">
                                 <!-- Hasil Dari ID ayat-arti akan ditampilkan di sini -->
-                                {{ $response['data']['text'] }}
+                                @if(isset($response['data']['text']) && !empty($response['data']['text']))
+                                    {{ $response['data']['text'] }}
+                                @else
+                                    -
+                                @endif
                             </div>
+
 
                             <div class="btn-group mt-4">
 
