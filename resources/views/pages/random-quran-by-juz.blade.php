@@ -223,7 +223,7 @@
                                 @if(isset($response['data']['arab']) && !empty($response['data']['arab']))
                                     {{ $response['data']['arab'] }}
                                 @else
-                                    Pilih juz yang mau di acak
+                                    -
                                 @endif
                             </h4>
 
