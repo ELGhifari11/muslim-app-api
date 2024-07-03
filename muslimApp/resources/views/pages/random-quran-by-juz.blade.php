@@ -270,7 +270,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 ">
                     <div class="card card-statistic-1 pr-2 pl-2">
 
-                        <div class="btn btn-primary btn-icon icon-left col-12 mb-4 mt-1">
+                        <div class="btn btn-primary btn-icon icon-left col-12 mb-4 mt-3">
                             <i class="fas fa-history"></i> Hasil Riwayat Random Ayat <span id="history-count"
                                 class="badge badge-danger">0</span>
                         </div>
@@ -309,7 +309,7 @@
                             <div class="tab-pane fade" id="id-jh" role="tabpanel" aria-labelledby="jh-tab3">
                                 RIWAYAT JUZ + HAL TAMPIL DISINI
                             </div>
-                            <div class="tab-pane fade" id="id-arabic" role="tabpanel" aria-labelledby="arabic-tab3">
+                            <div class="tab-pane fade lateef-arabic-riwayat font-weight-normal text-dark " id="id-arabic" role="tabpanel" aria-labelledby="arabic-tab3">
                                 RIWAYAT TEKS ARAB DISINI.
                             </div>
                             <div class="tab-pane fade" id="id-arti" role="tabpanel" aria-labelledby="arti-tab3">
