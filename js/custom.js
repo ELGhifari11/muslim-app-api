@@ -127,7 +127,7 @@ $(document).ready(function () {
             View
             </button>
             </div>`;
-            arabicHtml += `<h6 class="lateef-arabic-riwayat font-weight-normal text-center mr-2 ml-2">${i + 1}). ${historySuratAyat[i]} <br> ${historyArabic[i]}</h6>
+            arabicHtml += ` <h6 class="lateef-arabic-riwayat font-weight-normal text-center mr-2 ml-2">${i + 1}).${historySuratAyat[i]} <br> <div class="lateef-arabic-riwayat font-weight-normal text-center"> ${historyArabic[i]}</div></h6>
             <div class="btn-group mb-4 col-12">
             <button class="btn btn-sm btn-primary view-page-btn" data-index="${i}">
             <i class="fas fa-book"> </i>
