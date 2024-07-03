@@ -268,9 +268,9 @@
 
             <div class=" row ">
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 ">
-                    <div class="card card-statistic-1 pt-2 pb-2 pl-2">
+                    <div class="card card-statistic-1 pr-2 pl-2">
 
-                        <div class="btn btn-primary btn-icon icon-left col-12 mb-4 mt-5">
+                        <div class="btn btn-primary btn-icon icon-left col-12 mb-4 mt-1">
                             <i class="fas fa-history"></i> Hasil Riwayat Random Ayat <span id="history-count"
                                 class="badge badge-danger">0</span>
                         </div>
