@@ -24,11 +24,10 @@
     <div class="main-content">
         <section class="section">
             <div class="section-header">
-                <div class="card-icon btn btn-primary pt-2 pb-2 pr-2 pl-2 mr-3">
+                <div class="card-icon btn btn-primary pt-2 pb-2 pr-2 pl-2 mr-2">
                     <i class="fas fa-book"></i>
                 </div>
-                <h1 class="mr-3"> Random Ayat By</h1>
-
+                <h1 class="mr-2"> Random Ayat By</h1>
                 <div class="btn-group">
                     <button class="btn btn-sm btn-outline-primary" id="juz-button">
                         Juz
@@ -51,7 +50,7 @@
                     <input type="checkbox" id="toggle-audio" checked>
                 </div>
                 <div class="card-header-action">
-                    <select class="custom-select btn btn-primary tl text-white" id="juz-select">
+                    <select class="custom-select btn btn-primary text-white" id="juz-select">
                         @for ($i = 1; $i <= 30; $i++)
                             <option value="{{ $i }}">Juz {{ $i }}</option>
                         @endfor
@@ -174,26 +173,9 @@
                             </div>
                         </div>
                     </div>
+
+
                 </div>
-
-                <div class="pl-3 pr-3 mb-4">
-
-                    <div class="card-header-action">
-                        <div class="btn-group mb-4">
-                            <button class="btn btn-primary" id="random-ayat-btn2">
-                                <i class="fas fa-refresh"> </i>
-                                Next
-
-                            </button>
-                            <button class="btn btn-primary" id="view-page-button1">
-                                <i class="fas fa-book"> </i>
-                                View
-
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
 
             </div>
 
@@ -202,6 +184,25 @@
             <div class=" mb-4">
 
                 <div class="card-header-action">
+
+                    <div class="pl-3 pr-3 mb-4">
+
+                        <div class="card-header-action">
+                            <div class="btn-group mb-4">
+                                <button class="btn btn-primary" id="random-ayat-btn2">
+                                    <i class="fas fa-refresh"> </i>
+                                    Next
+
+                                </button>
+                                <button class="btn btn-primary" id="view-page-button1">
+                                    <i class="fas fa-book"> </i>
+                                    View
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
                     {{-- <div class="card">
                                 <button class="btn btn-primary"
                                     id="modal-ku">Launch Modal</button>
@@ -299,22 +300,22 @@
                             </li>
                         </ul>
                         <div class="tab-content mt-3  font-weight-normal" id="myTabContent2">
-                            <div class="tab-pane fade show active" id="id-audio" role="tabpanel"
+                            <h6 class="tab-pane fade font-weight-normal text-center  show active" id="id-audio" role="tabpanel"
                                 aria-labelledby="audio-tab3">
                                 RIWAYAT AUDIO TAMPIL DISINI.
-                            </div>
-                            <div class="tab-pane fade" id="id-sa" role="tabpanel" aria-labelledby="sa-tab3">
+                            </h6>
+                            <h6 class="tab-pane fade font-weight-normal text-center"  id="id-sa" role="tabpanel" aria-labelledby="sa-tab3">
                                 RIWAYAT SURAT + AYAT TAMPIL DISINI.
-                            </div>
-                            <div class="tab-pane fade" id="id-jh" role="tabpanel" aria-labelledby="jh-tab3">
+                            </h6>
+                            <h6 class="tab-pane fade font-weight-normal text-center"  id="id-jh" role="tabpanel" aria-labelledby="jh-tab3">
                                 RIWAYAT JUZ + HAL TAMPIL DISINI
-                            </div>
-                            <h4 class="tab-pane fade lateef-arabic-riwayat text-center font-weight-normal" id="id-arabic" role="tabpanel" aria-labelledby="arabic-tab3">
+                            </h6>
+                            <h6 class="tab-pane fade font-weight-normal  lateef-arabic-riwayat text-center" id="id-arabic" role="tabpanel" aria-labelledby="arabic-tab3">
                                 RIWAYAT TEKS ARAB DISINI.
-                            </h4>
-                            <div class="tab-pane fade" id="id-arti" role="tabpanel" aria-labelledby="arti-tab3">
+                            </h6>
+                            <h6 class="tab-pane fade font-weight-normal text-center"  id="id-arti" role="tabpanel" aria-labelledby="arti-tab3">
                                 RIWAYAT TEKS ARTI DISINI.
-                            </div>
+                            </h6>
                         </div>
                     </div>
                 </div>

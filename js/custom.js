@@ -105,7 +105,7 @@ $(document).ready(function () {
         var artiHtml = '';
 
         for (var i = 0; i < historyAudio.length; i++) {
-            audioHtml += `<h6>${i + 1} ). ${historySuratAyat[i]} <br> <audio controls src="${historyAudio[i]}"></audio></h6>
+            audioHtml += `<h6 class="font-weight-normal " >( ${i + 1} ).<audio controls src="${historyAudio[i]}"></audio></h6>
             <div class="btn-group mb-4 col-12">
             <button class="btn btn-primary view-page-btn" data-index="${i}">
             <i class="fas fa-book"> </i>
@@ -113,28 +113,28 @@ $(document).ready(function () {
             </button>
             </div>
             `;
-            suratAyatHtml += `<h6>${i + 1} ). ${historySuratAyat[i]}</h6>
+            suratAyatHtml += `<h6 class="font-weight-normal " > ( ${i + 1} ). ${historySuratAyat[i]}</h6>
             <div class="btn-group mb-4 col-12">
             <button class="btn btn-sm btn-primary view-page-btn" data-index="${i}">
             <i class="fas fa-book"> </i>
             View
             </button>
             </div>`;
-            juzPageHtml += `<h6>${i + 1} ). ${historyJuzPage[i]}</h6>
+            juzPageHtml += `<h6 class="font-weight-normal " > ( ${i + 1} ). ${historyJuzPage[i]}</h6>
             <div class="btn-group mb-4 col-12">
             <button class="btn btn-sm btn-primary view-page-btn" data-index="${i}">
             <i class="fas fa-book"> </i>
             View
             </button>
             </div>`;
-            arabicHtml += ` <h6 class="lateef-arabic-riwayat font-weight-normal mr-3 ">${i + 1}).${historySuratAyat[i]} <br> <div class="lateef-arabic-riwayat font-weight-normal text-center"> ${historyArabic[i]}</div></h6>
+            arabicHtml += ` <h6 class="lateef-arabic-riwayat font-weight-normal mr-3 ">( ${i + 1} ). ${historyArabic[i]} </h6>
             <div class="btn-group mb-4 col-12">
             <button class="btn btn-sm btn-primary view-page-btn" data-index="${i}">
             <i class="fas fa-book"> </i>
             View
             </button>
             </div>`;
-            artiHtml += `<h6>${i + 1} ).  ${historySuratAyat[i]} <br> ${historyArti[i]}</h6> <br>
+            artiHtml += `<h6 class="font-weight-normal "> ( ${i + 1} ).${historyArti[i]}</h6> <br>
             <div class="btn-group mb-4 col-12">
             <button class="btn btn-sm btn-primary view-page-btn" data-index="${i}">
             <i class="fas fa-book"> </i>
