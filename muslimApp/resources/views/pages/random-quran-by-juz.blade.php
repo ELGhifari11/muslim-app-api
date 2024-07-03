@@ -212,7 +212,7 @@
                     <ul class="list-unstyled list-unstyled-border">
                         <li class="media">
                             <a href="#">
-                                <img class="mr-3 rounded" width="50" src="{{ asset('img/products/product-1-50.png') }}"
+                                <img class="mr-3 rounded" width="30" src="{{ asset('img/products/product-1-50.png') }}"
                                     alt="product">
                             </a>
                             <div class="media-body">
@@ -229,7 +229,7 @@
                         </li>
                     </ul>
                     <div class="text-center mt-2 mb-2">
-                        <h4 id="ayat-arab" class="lateef-arabic text-dark">
+                        <h4 id="ayat-arab" class="lateef-arabic font-weight-normal text-dark">
                             <!-- Hasil Dari ID ayat-arab akan ditampilkan di sini -->
                             @if (isset($response['data']['arab']) && !empty($response['data']['arab']))
                                 {{ $response['data']['arab'] }}

@@ -62,12 +62,15 @@
   font-family: 'Lateef';
   line-height: 1.7;
   font-size: 35px;
+  font-weight: 300;
 }
 
 .lateef-arabic-riwayat {
     font-family: 'Lateef';
     line-height: 1.7;
     font-size: 27px;
+    font-weight: 300;
+
   }
 
 
@@ -161,7 +164,7 @@ a:not(.btn-social-icon):not(.btn-social):not(.page-link) .fab {
 }
 
 .text-dark, .text-dark-all *, .text-dark-all *:before, .text-dark-all *:after {
-  color: #191d21 !important;
+  color: #444444 !important;
 }
 
 .font-weight-normal {
