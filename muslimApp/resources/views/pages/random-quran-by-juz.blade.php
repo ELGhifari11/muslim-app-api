@@ -309,9 +309,9 @@
                             <div class="tab-pane fade" id="id-jh" role="tabpanel" aria-labelledby="jh-tab3">
                                 RIWAYAT JUZ + HAL TAMPIL DISINI
                             </div>
-                            <div class="tab-pane fade lateef-arabic-riwayat font-weight-normal" id="id-arabic" role="tabpanel" aria-labelledby="arabic-tab3">
+                            <h4 class="tab-pane fade lateef-arabic-riwayat text-center font-weight-normal" id="id-arabic" role="tabpanel" aria-labelledby="arabic-tab3">
                                 RIWAYAT TEKS ARAB DISINI.
-                            </div>
+                            </h4>
                             <div class="tab-pane fade" id="id-arti" role="tabpanel" aria-labelledby="arti-tab3">
                                 RIWAYAT TEKS ARTI DISINI.
                             </div>
