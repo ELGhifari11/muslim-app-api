@@ -247,7 +247,7 @@
                         </div>
 
 
-                        <div class="btn-group mt-4">
+                        <div class="btn-group mt-4 mb-5">
 
                             <button class="btn btn-primary" id="random-ayat-btn2">
                                 <i class="fas fa-refresh"> </i>
@@ -266,10 +266,9 @@
 
             </div>
 
-
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
+            <div class=" row ">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 ">
+                    <div class="card card-statistic-1 pt-2 pb-2 pl-2">
 
                         <div class="btn btn-primary btn-icon icon-left col-12 mb-4 mt-5">
                             <i class="fas fa-history"></i> Hasil Riwayat Random Ayat <span id="history-count"
