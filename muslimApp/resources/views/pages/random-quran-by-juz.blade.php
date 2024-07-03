@@ -215,7 +215,7 @@
                     <ul class="list-unstyled list-unstyled-border">
                         <li class="media">
                             <div class="media-body">
-                                <div id="audio" class="media-title mr-5">
+                                <div id="audio" class="media-title">
                                     <!-- Hasil Dari ID audio akan ditampilkan di sini -->
                                     @if (isset($response['data']['audio']) && !empty($response['data']['audio']))
                                         <audio controls src="{{ $response['data']['audio'] }}"></audio>
