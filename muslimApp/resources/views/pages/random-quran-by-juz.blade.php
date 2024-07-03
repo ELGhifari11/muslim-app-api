@@ -6,8 +6,7 @@
     <!-- CSS Libraries -->
     <link rel="stylesheet" href="{{ asset('library/jqvmap/dist/jqvmap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('library/summernote/dist/summernote-bs4.min.css') }}">
-    <link rel="stylesheet"
-    href="{{ asset('library/prismjs/themes/prism.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('library/prismjs/themes/prism.min.css') }}">
 @endpush
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/stisla/2.3.0/css/stisla.css">
@@ -46,7 +45,7 @@
                 </div>
             </div>
 
-            <div class="pl-4 pr-4 mb-4">
+            <div class="pl-3 pr-3 mb-4">
                 <div>
                     <label for="toggle-audio">Auto Play Audio</label>
                     <input type="checkbox" id="toggle-audio" checked>
@@ -78,7 +77,9 @@
                         </div>
                         <div class="card-wrap">
                             <div id="no-surat" class="card-header">
-                                <h4>SURAT KE - {{ isset($response['info']['surat']['id']) ? $response['info']['surat']['id'] : '-' }}</h4>
+                                <h4>SURAT KE -
+                                    {{ isset($response['info']['surat']['id']) ? $response['info']['surat']['id'] : '-' }}
+                                </h4>
                                 <!-- Hasil Dari ID no-surat akan ditampilkan di sini -->
                             </div>
                             <div id="nama-surat" class="card-body">
@@ -99,7 +100,7 @@
                                 <h4>JUZ</h4>
                             </div>
                             <div id="no-juz" class="card-body">
-                                @if(isset($response['data']['juz']))
+                                @if (isset($response['data']['juz']))
                                     {{ $response['data']['juz'] }}
                                 @else
                                     -
@@ -120,10 +121,10 @@
                             </div>
 
                             <div id="no-page" class="card-body">
-                                @if(isset($response['data']['page']))
+                                @if (isset($response['data']['page']))
                                     {{ $response['data']['page'] }}
                                 @else
-                                   -
+                                    -
                                 @endif
                                 <!-- Hasil Dari ID no-page akan ditampilkan di sini -->
                             </div>
@@ -142,7 +143,7 @@
                             </div>
 
                             <div id="no-ayah" class="card-body">
-                                @if(isset($response['data']['ayah']))
+                                @if (isset($response['data']['ayah']))
                                     {{ $response['data']['ayah'] }}
                                 @else
                                     -
@@ -164,7 +165,7 @@
                             </div>
 
                             <div id="no-ayat-max" class="card-body">
-                                @if(isset($response['info']['surat']['ayat_max']))
+                                @if (isset($response['info']['surat']['ayat_max']))
                                     {{ $response['info']['surat']['ayat_max'] }}
                                 @else
                                     -
@@ -174,16 +175,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
+                <div class="pl-3 pr-3 mb-4">
 
-
-            <div class="card-body ">
-                <div class="summary ">
-                    {{-- <div class="card">
-                                <button class="btn btn-primary"
-                                    id="modal-ku">Launch Modal</button>
-                        </div> --}}
+                    <div class="card-header-action">
                         <div class="btn-group mb-4">
                             <button class="btn btn-primary" id="random-ayat-btn2">
                                 <i class="fas fa-refresh"> </i>
@@ -196,62 +191,77 @@
 
                             </button>
                         </div>
+                    </div>
+                </div>
 
-                        <h6 class="mb-3"><span class="text-muted">By Misyari Rasyied</span></h6>
-                        <ul class="list-unstyled list-unstyled-border">
-                            <li class="media">
-                                <a href="#">
-                                    <img class="mr-3 rounded" width="50"
-                                        src="{{ asset('img/products/product-1-50.png') }}" alt="product">
-                                </a>
-                                <div class="media-body">
-                                    <div id="audio" class="media-title mr-5">
-                                        <!-- Hasil Dari ID audio akan ditampilkan di sini -->
-                                        @if(isset($response['data']['audio']) && !empty($response['data']['audio']))
-                                            <audio controls src="{{ $response['data']['audio'] }}"></audio>
-                                        @else
-                                            -
-                                        @endif
-                                    </div>
+
+            </div>
+
+
+
+            <div class="card-body ">
+                <div class="summary ">
+                    {{-- <div class="card">
+                                <button class="btn btn-primary"
+                                    id="modal-ku">Launch Modal</button>
+                        </div> --}}
+
+
+                    <h6 class="mb-3"><span class="text-muted">By Misyari Rasyied</span></h6>
+                    <ul class="list-unstyled list-unstyled-border">
+                        <li class="media">
+                            <a href="#">
+                                <img class="mr-3 rounded" width="50" src="{{ asset('img/products/product-1-50.png') }}"
+                                    alt="product">
+                            </a>
+                            <div class="media-body">
+                                <div id="audio" class="media-title mr-5">
+                                    <!-- Hasil Dari ID audio akan ditampilkan di sini -->
+                                    @if (isset($response['data']['audio']) && !empty($response['data']['audio']))
+                                        <audio controls src="{{ $response['data']['audio'] }}"></audio>
+                                    @else
+                                        -
+                                    @endif
                                 </div>
-
-                            </li>
-                        </ul>
-                        <div class="text-center mt-2 mb-2">
-                            <h4 id="ayat-arab" class="lateef-arabic text-dark">
-                                <!-- Hasil Dari ID ayat-arab akan ditampilkan di sini -->
-                                @if(isset($response['data']['arab']) && !empty($response['data']['arab']))
-                                    {{ $response['data']['arab'] }}
-                                @else
-                                    -
-                                @endif
-                            </h4>
-
-                            <div id="ayat-arti" class="text-muted">
-                                <!-- Hasil Dari ID ayat-arti akan ditampilkan di sini -->
-                                @if(isset($response['data']['text']) && !empty($response['data']['text']))
-                                    {{ $response['data']['text'] }}
-                                @else
-                                    -
-                                @endif
                             </div>
 
+                        </li>
+                    </ul>
+                    <div class="text-center mt-2 mb-2">
+                        <h4 id="ayat-arab" class="lateef-arabic text-dark">
+                            <!-- Hasil Dari ID ayat-arab akan ditampilkan di sini -->
+                            @if (isset($response['data']['arab']) && !empty($response['data']['arab']))
+                                {{ $response['data']['arab'] }}
+                            @else
+                                -
+                            @endif
+                        </h4>
 
-                            <div class="btn-group mt-4">
-
-                                <button class="btn btn-primary" id="random-ayat-btn2">
-                                    <i class="fas fa-refresh"> </i>
-                                    Next
-
-                                </button>
-                                <button class="btn btn-primary" id="view-page-button2">
-                                    <i class="fas fa-book"> </i>
-                                    View
-
-                                </button>
-                            </div>
-
+                        <div id="ayat-arti" class="text-muted">
+                            <!-- Hasil Dari ID ayat-arti akan ditampilkan di sini -->
+                            @if (isset($response['data']['text']) && !empty($response['data']['text']))
+                                {{ $response['data']['text'] }}
+                            @else
+                                -
+                            @endif
                         </div>
+
+
+                        <div class="btn-group mt-4">
+
+                            <button class="btn btn-primary" id="random-ayat-btn2">
+                                <i class="fas fa-refresh"> </i>
+                                Next
+
+                            </button>
+                            <button class="btn btn-primary" id="view-page-button2">
+                                <i class="fas fa-book"> </i>
+                                View
+
+                            </button>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
@@ -262,7 +272,8 @@
                     <div class="card-body">
 
                         <div class="btn btn-primary btn-icon icon-left col-12 mb-4 mt-5">
-                            <i class="fas fa-history"></i> Hasil Riwayat Random Ayat <span id="history-count" class="badge badge-danger">0</span>
+                            <i class="fas fa-history"></i> Hasil Riwayat Random Ayat <span id="history-count"
+                                class="badge badge-danger">0</span>
                         </div>
 
 
@@ -356,6 +367,4 @@
     <script src="{{ asset('js/page/index-0.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
     <script src="{{ asset('js/page/bootstrap-modal.js') }}"></script>
-
 @endpush
-
