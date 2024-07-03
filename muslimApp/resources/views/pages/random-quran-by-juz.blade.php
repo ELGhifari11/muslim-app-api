@@ -298,7 +298,7 @@
                                     aria-controls="arti" aria-selected="false">Arti</a>
                             </li>
                         </ul>
-                        <div class="tab-content mt-3" id="myTabContent2">
+                        <div class="tab-content mt-3  font-weight-normal" id="myTabContent2">
                             <div class="tab-pane fade show active" id="id-audio" role="tabpanel"
                                 aria-labelledby="audio-tab3">
                                 RIWAYAT AUDIO TAMPIL DISINI.
@@ -309,7 +309,7 @@
                             <div class="tab-pane fade" id="id-jh" role="tabpanel" aria-labelledby="jh-tab3">
                                 RIWAYAT JUZ + HAL TAMPIL DISINI
                             </div>
-                            <div class="tab-pane fade lateef-arabic-riwayat font-weight-normal text-dark " id="id-arabic" role="tabpanel" aria-labelledby="arabic-tab3">
+                            <div class="tab-pane fade lateef-arabic-riwayat font-weight-normal" id="id-arabic" role="tabpanel" aria-labelledby="arabic-tab3">
                                 RIWAYAT TEKS ARAB DISINI.
                             </div>
                             <div class="tab-pane fade" id="id-arti" role="tabpanel" aria-labelledby="arti-tab3">
