@@ -208,13 +208,12 @@
                         </div> --}}
 
 
-                    <h6 class="mb-3"><span class="text-muted">By Misyari Rasyied</span></h6>
+                    <h6 class="mb-3"><span class="text-muted"><a href="#">
+                        <img class="mr-3 rounded" width="30" src="{{ asset('img/products/product-1-50.png') }}"
+                            alt="product">
+                    </a>By Misyari Rasyied</span></h6>
                     <ul class="list-unstyled list-unstyled-border">
                         <li class="media">
-                            <a href="#">
-                                <img class="mr-3 rounded" width="30" src="{{ asset('img/products/product-1-50.png') }}"
-                                    alt="product">
-                            </a>
                             <div class="media-body">
                                 <div id="audio" class="media-title mr-5">
                                     <!-- Hasil Dari ID audio akan ditampilkan di sini -->
