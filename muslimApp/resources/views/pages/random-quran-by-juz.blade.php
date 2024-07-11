@@ -15,11 +15,17 @@
 
 @section('main')
     <?php
+    $url = 'https://elghifari.site/api/quran/ayat/acak/juz1';
+    $data = @file_get_contents($url);
 
-    // Panggilan API
-    $data = file_get_contents('https://muslimapp.elghifari.site/api/quran/ayat/acak/juz1');
+if ($data === FALSE) {
+    $error = error_get_last();
+    echo "Terjadi kesalahan saat mengakses API: " . $error['message'];
+} else {
     $response = json_decode($data, true);
     // Tampilkan data dalam tampilan Blade
+}
+
     ?>
     <div class="main-content">
         <section class="section">
@@ -267,9 +273,9 @@
 
             </div>
 
-            <div class=" row ">
+            <div class="col-12">
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 ">
-                    <div class="card card-statistic-1 pr-2 pl-2">
+                    <div class="card card-statistic-1 pr-2 pl-2 col-12">
 
                         <div class="btn btn-primary btn-icon icon-left col-12 mb-4 mt-3">
                             <i class="fas fa-history"></i> Hasil Riwayat Random Ayat <span id="history-count"

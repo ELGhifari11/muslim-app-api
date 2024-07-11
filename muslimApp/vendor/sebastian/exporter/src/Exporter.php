@@ -33,6 +33,7 @@ use function str_replace;
 use function strtr;
 use function var_export;
 use BackedEnum;
+use Google\Protobuf\Internal\Message;
 use ReflectionObject;
 use SebastianBergmann\RecursionContext\Context as RecursionContext;
 use SplObjectStorage;
@@ -71,6 +72,9 @@ final readonly class Exporter
         return $this->recursiveExport($value, $indentation);
     }
 
+    /**
+     * @param array<mixed> $data
+     */
     public function shortenedRecursiveExport(array &$data, ?RecursionContext $processed = null): string
     {
         if (!$processed) {
@@ -129,12 +133,10 @@ final readonly class Exporter
         }
 
         if (is_object($value)) {
-            $numberOfProperties = count((new ReflectionObject($value))->getProperties());
-
             return sprintf(
                 '%s Object (%s)',
                 $value::class,
-                $numberOfProperties > 0 ? '...' : '',
+                $this->countProperties($value) > 0 ? '...' : '',
             );
         }
 
@@ -151,6 +153,8 @@ final readonly class Exporter
     /**
      * Converts an object to an array containing all of its private, protected
      * and public properties.
+     *
+     * @return array<mixed>
      */
     public function toArray(mixed $value): array
     {
@@ -201,6 +205,22 @@ final readonly class Exporter
         return $array;
     }
 
+    public function countProperties(object $value): int
+    {
+        if ($this->canBeReflected($value)) {
+            $numberOfProperties = count((new ReflectionObject($value))->getProperties());
+        } else {
+            // @codeCoverageIgnoreStart
+            $numberOfProperties = count($this->toArray($value));
+            // @codeCoverageIgnoreEnd
+        }
+
+        return $numberOfProperties;
+    }
+
+    /**
+     * @param array<mixed> $data
+     */
     private function shortenedCountedRecursiveExport(array &$data, RecursionContext $processed, int &$counter): string
     {
         $result = [];
@@ -250,6 +270,7 @@ final readonly class Exporter
             return 'resource (closed)';
         }
 
+        /** @phpstan-ignore function.impossibleType */
         if (is_resource($value)) {
             return sprintf(
                 'resource(%d) of type (%s)',
@@ -333,6 +354,9 @@ final readonly class Exporter
             "'";
     }
 
+    /**
+     * @param array<mixed> $value
+     */
     private function exportArray(array &$value, RecursionContext $processed, int $indentation): string
     {
         if (($key = $processed->contains($value)) !== false) {
@@ -392,5 +416,17 @@ final readonly class Exporter
         }
 
         return $class . ' Object #' . spl_object_id($value) . ' (' . $buffer . ')';
+    }
+
+    private function canBeReflected(object $object): bool
+    {
+        /** @phpstan-ignore class.notFound */
+        if ($object instanceof Message) {
+            // @codeCoverageIgnoreStart
+            return false;
+            // @codeCoverageIgnoreEnd
+        }
+
+        return true;
     }
 }

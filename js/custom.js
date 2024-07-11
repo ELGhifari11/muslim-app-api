@@ -17,7 +17,7 @@ $(document).ready(function () {
 
     function fetchRandomAyat(juz) {
         $.ajax({
-            url: 'https://muslimapp.elghifari.site/api/quran/ayat/acak/juz' + juz,
+            url: 'https://elghifari.site/api/quran/ayat/acak/juz' + juz,
             method: 'GET',
             beforeSend: function () {
                 $('#random-ayat-btn1, #random-ayat-btn2, #juz-select, #juz-select2, #ayat-arab, #ayat-arti, #no-ayat, #audio, #no-ayat-max, #no-surat, #nama-surat, #no-juz, #no-page').addClass('btn-progress');
@@ -42,7 +42,7 @@ $(document).ready(function () {
 
     function fetchRandomAyatByRange(startJuz, endJuz) {
         $.ajax({
-            url: 'https://muslimapp.elghifari.site/api/quran/ayat/acak/juz/' + startJuz + '-' + endJuz,
+            url: 'https://elghifari.site/api/quran/ayat/acak/juz/' + startJuz + '-' + endJuz,
             method: 'GET',
             beforeSend: function () {
                 $('#random-ayat-btn1, #random-ayat-btn2, #juz-select, #juz-select2, #ayat-arab, #ayat-arti, #no-ayat, #audio, #no-ayat-max, #no-surat, #nama-surat, #no-juz, #no-page').addClass('btn-progress');
