@@ -273,8 +273,8 @@ if ($data === FALSE) {
 
             </div>
 
-            <div class="col-12">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12 ">
+
+
                     <div class="card card-statistic-1 pr-2 pl-2 col-12">
 
                         <div class="btn btn-primary btn-icon icon-left col-12 mb-4 mt-3">
@@ -324,7 +324,7 @@ if ($data === FALSE) {
                             </h6>
                         </div>
                     </div>
-                </div>
+
                 <div class="btn-group col-12">
                     <button class="btn btn-primary" id="random-ayat-btn2">
                         <i class="fas fa-refresh"> </i>
@@ -337,7 +337,7 @@ if ($data === FALSE) {
 
                     </button>
                 </div>
-            </div>
+            
 
 
 
