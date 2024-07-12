@@ -33,7 +33,7 @@ if ($data === FALSE) {
                 <div class="card-icon btn btn-primary pt-2 pb-2 pr-2 pl-2 mr-2">
                     <i class="fas fa-book"></i>
                 </div>
-                <h1 class="mr-2"> Random By </h1>
+                <h1 class="mr-2"> Random</h1>
                 <div class="btn-group">
                     <button class="btn btn-sm btn-outline-primary" id="juz-button">
                         Juz
@@ -337,7 +337,7 @@ if ($data === FALSE) {
 
                     </button>
                 </div>
-            
+
 
 
 
