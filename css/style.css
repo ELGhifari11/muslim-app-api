@@ -58,6 +58,18 @@
 @import url("//fonts.googleapis.com/css?family=Nunito:400,600,700,800");
 @import url("https://fonts.googleapis.com/css2?family=Lateef&display=swap");
 
+#play-pause-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#play-pause-icon {
+  font-size: 24px;
+}
+
+
 .lateef-arabic {
   font-family: 'Lateef';
   line-height: 1.7;
@@ -1659,9 +1671,9 @@ h6 .badge {
   color: #25c492;
 }
 
-#juz-select2, #sampai-text {
+/* #juz-select2, #sampai-text {
     display: none;
-}
+} */
 
 .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .btn-outline-primary.disabled:hover, .btn-outline-primary.disabled:focus, .btn-outline-primary.disabled:active {
   background-color: #25c492 !important;

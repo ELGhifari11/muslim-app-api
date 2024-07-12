@@ -33,7 +33,7 @@ if ($data === FALSE) {
                 <div class="card-icon btn btn-primary pt-2 pb-2 pr-2 pl-2 mr-2">
                     <i class="fas fa-book"></i>
                 </div>
-                <h1 class="mr-2"> Random by</h1>
+                <h1 class="mr-3"> Acak by</h1>
                 <div class="btn-group">
                     <button class="btn btn-sm btn-outline-primary" id="juz-button">
                         Juz
@@ -147,7 +147,7 @@ if ($data === FALSE) {
                                 <h4>AYAT</h4>
                             </div>
 
-                            <div id="no-ayah" class="card-body">
+                            <div id="no-ayat" class="card-body">
                                 @if (isset($response['data']['ayah']))
                                     {{ $response['data']['ayah'] }}
                                 @else
@@ -195,7 +195,7 @@ if ($data === FALSE) {
 
                         <div class="card-header-action">
                             <div class="btn-group mb-4">
-                                <button class="btn btn-primary" id="random-ayat-btn2">
+                                <button class="btn btn-primary" id="random-ayat-btn1">
                                     <i class="fas fa-refresh"> </i>
                                     Next
 
@@ -225,7 +225,7 @@ if ($data === FALSE) {
                                 <div id="audio" class="media-title">
                                     <!-- Hasil Dari ID audio akan ditampilkan di sini -->
                                     @if (isset($response['data']['audio']) && !empty($response['data']['audio']))
-                                        <audio controls src="{{ $response['data']['audio'] }}"></audio>
+                                        <audio  src="{{ $response['data']['audio'] }}"></audio>
                                     @else
                                         -
                                     @endif
@@ -325,7 +325,7 @@ if ($data === FALSE) {
                         </div>
                     </div>
 
-                    <button class="btn btn-primary btn-icon icon-left col-12 mb-4 mt-3" id="random-ayat-btn2">
+                    <button class="btn btn-primary btn-icon icon-left col-12 mb-4 mt-3" id="random-ayat-btn3">
                         <i class="fas fa-refresh"> </i>
                         Next
 

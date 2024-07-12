@@ -74,7 +74,7 @@ $(document).ready(function () {
         $('#no-ayat-max').html(`${info.surat.ayat_max}`);
         var audioHtml = `
         <div class="media-title mr-5 ">
-        <audio id="ayat-audio" controls src="${data.audio}"></audio>
+        <audio id="ayat-audio" src="${data.audio}" style="display:none;"></audio>
         </div>`;
         $('#audio').html(audioHtml);
 
@@ -86,6 +86,9 @@ $(document).ready(function () {
         $('#ayat-arab').html(`${data.arab}`);
         $('#ayat-arti').html(`${data.text}`);
     }
+
+   
+    
 
     function updateHistory(info, data) {
         historyAudio.push(data.audio);
@@ -216,12 +219,21 @@ $(document).ready(function () {
 
     });
 
+
+
+
+    
+
     // Event listener untuk klik pada tombol
-    $('#random-ayat-btn1, #random-ayat-btn2').on('click', function () {
+    $('#random-ayat-btn1, #random-ayat-btn2,#random-ayat-btn3').off('click').on('click', function() {
         if ($('#range-juz-button').hasClass('active')) {
             fetchRandomAyatByRange(selectedStartJuz, selectedEndJuz);
+            console.log('Random Ayat button clicked 1111 ');
+
         } else {
             fetchRandomAyat(selectedJuz);
+            console.log('Random Ayat button clicked22222');
+
         }
     });
 
