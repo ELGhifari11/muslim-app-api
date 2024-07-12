@@ -325,15 +325,9 @@ if ($data === FALSE) {
                         </div>
                     </div>
 
-                <div class="btn-group col-12">
-                    <button class="btn btn-primary" id="random-ayat-btn2">
+                    <button class="btn btn-primary btn-icon icon-left col-12 mb-4 mt-3" id="random-ayat-btn2">
                         <i class="fas fa-refresh"> </i>
                         Next
-
-                    </button>
-                    <button class="btn btn-primary" id="view-page-button3">
-                        <i class="fas fa-book"> </i>
-                        View
 
                     </button>
                 </div>

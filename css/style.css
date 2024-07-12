@@ -823,7 +823,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 .card .card-header h4 + .card-header-action .btn.active,
 .card .card-header h4 + .card-header-form .btn.active {
-  box-shadow: 0 2px 6px #acb5f6;
+  box-shadow: 0 2px 6px #25c4923c;
   background-color: #25c492;
   color: #fff;
 }
@@ -1294,7 +1294,7 @@ table tr:hover .table-links {
   background-color: #f6f7fe;
 }
 .nav-pills .nav-item .nav-link.active {
-  box-shadow: 0 2px 6px #acb5f6;
+  box-shadow: 0 2px 6px #25c4923c;
   color: #fff;
   background-color: #25c492;
 }
@@ -1640,7 +1640,7 @@ h6 .badge {
 }
 
 .btn-primary, .btn-primary.disabled {
-  box-shadow: 0 2px 6px #acb5f6;
+  box-shadow: 0 2px 6px #25c4923c;
   background-color: #25c492;
   border-color: #25c492;
 }
@@ -1833,7 +1833,7 @@ h6 .badge {
   background-color: #f2f2f2;
 }
 .accordion .accordion-header[aria-expanded=true] {
-  box-shadow: 0 2px 6px #acb5f6;
+  box-shadow: 0 2px 6px #25c4923c;
   background-color: #25c492;
   color: #fff;
 }
@@ -2654,7 +2654,7 @@ pre {
 }
 
 .shadow-primary {
-  box-shadow: 0 2px 6px #acb5f6;
+  box-shadow: 0 2px 6px #25c4923c;
 }
 
 .shadow-secondary {
@@ -3156,7 +3156,7 @@ body.sidebar-mini .main-sidebar .sidebar-menu > li > a.has-dropdown:after {
   content: initial;
 }
 body.sidebar-mini .main-sidebar .sidebar-menu > li.active > a {
-  box-shadow: 0 4px 8px #acb5f6;
+  box-shadow: 0 4px 8px #25c4923c;
   background-color: #25c492;
   color: #fff;
 }
